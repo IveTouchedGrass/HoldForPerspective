@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "hold_for_perspective",
+  "version": "1.0.0",
+  "name": "Hold For Perspective",
+  "description": "Hold the F5 key to temporarily switch perspectives",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/hold_for_perspective/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ivetouchedgrass.hold_for_perspective.client.HoldForPerspectiveClient"
+    ],
+    "main": [
+      "ivetouchedgrass.hold_for_perspective.HoldForPerspective"
+    ]
+  },
+  "mixins": [
+    "hold_for_perspective.mixins.json",
+    {
+      "config": "hold_for_perspective.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "minecraft": ">=1.21.1"
+  }
+}

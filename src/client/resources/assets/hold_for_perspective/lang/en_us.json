@@ -1,0 +1,15 @@
+{
+  "tooltip.hold_for_perspective.base_tooltip": "What perspective should the mod put you in when holding your toggle perspective key?",
+  "tooltip.hold_for_perspective.first_person": "This is the perspective where you look through your character's eyes",
+  "tooltip.hold_for_perspective.third_person_back": "This is the perspective where your camera is behind your character and looks in front of them",
+  "tooltip.hold_for_perspective.third_person_front": "This is the perspective where your camera is in front of your character and looks at their face",
+  "tooltip.hold_for_perspective.no_keybind": "This setting only has an effect when the mod is enabled. You can set a keybind in the keybinds settings.",
+  "tooltip.hold_for_perspective.only_when_enabled": "This setting only has an effect when the mod is enabled. You can toggle it at any time with %1$s.",
+  "tooltip.hold_for_perspective.first_person.name": "First Person",
+  "tooltip.hold_for_perspective.third_person_back.name": "Third Person Back",
+  "tooltip.hold_for_perspective.third_person_front.name": "Third Person Front",
+  "hold_for_perspective.mod_enabled": "Toggled the Hold For Perspective mod on",
+  "hold_for_perspective.mod_disabled": "Toggled the Hold For Perspective mod off",
+  "options.hold_for_perspective.perspective_when_held": "Perspective when holding key",
+  "key.hold_for_perspective.toggle": "Toggle Hold for Perspective mod"
+}
