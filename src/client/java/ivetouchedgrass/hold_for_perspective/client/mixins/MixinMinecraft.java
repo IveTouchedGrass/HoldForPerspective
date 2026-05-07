@@ -17,8 +17,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinMinecraft {
     @WrapOperation(method = "handleInputEvents", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/KeyBinding;wasPressed()Z", ordinal = 0))
     private boolean wrapPerspectiveSet(KeyBinding instance, Operation<Boolean> original) {
-        if (HoldForPerspectiveClient.isModActive)
+        if (HoldForPerspectiveClient.isModActive && instance == MinecraftClient.getInstance().options.togglePerspectiveKey) {
+            while (original.call(instance)) {}
             return false;
+        }
         return original.call(instance);
     }
 
