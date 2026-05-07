@@ -1,18 +1,18 @@
 package ivetouchedgrass.hold_for_perspective.client;
 
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
+import com.mojang.blaze3d.platform.InputConstants;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.minecraft.client.KeyMapping;
 import org.lwjgl.glfw.GLFW;
 
 public class ModKeybinds {
-    public static KeyBinding TOGGLE_MOD;
+    public static KeyMapping TOGGLE_MOD;
     public static void registerKeybinds() {
-        TOGGLE_MOD = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+        TOGGLE_MOD = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.hold_for_perspective.toggle",
-                InputUtil.Type.KEYSYM,
+                InputConstants.Type.KEYSYM,
                 GLFW.GLFW_KEY_BACKSLASH,
-                KeyBinding.Category.CREATIVE
+                KeyMapping.Category.MISC
         ));
     }
 }

@@ -2,17 +2,18 @@ package ivetouchedgrass.hold_for_perspective.client.mixins;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import ivetouchedgrass.hold_for_perspective.client.HoldForPerspectiveClient;
-import net.minecraft.client.option.SimpleOption;
+import net.minecraft.client.OptionInstance;
+import net.minecraft.client.gui.screens.options.AccessibilityOptionsScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.Arrays;
 
-@Mixin(net.minecraft.client.gui.screen.option.AccessibilityOptionsScreen.class)
+@Mixin(AccessibilityOptionsScreen.class)
 public class MixinAddPerspectiveSetting {
-    @ModifyReturnValue(method = "getOptions", at = @At("RETURN"))
-    private static SimpleOption<?>[] addOption(SimpleOption<?>[] original) {
+    @ModifyReturnValue(method = "options", at = @At("RETURN"))
+    private static OptionInstance<?>[] addOption(OptionInstance<?>[] original) {
         return appendElementsToArray(original, HoldForPerspectiveClient.SET_PERSPECTIVE);
     }
 
