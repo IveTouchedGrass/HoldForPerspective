@@ -12,7 +12,7 @@ public class ModKeybinds {
                 "key.hold_for_perspective.toggle",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_BACKSLASH,
-                "key.categories.gameplay"
+                KeyBinding.Category.CREATIVE
         ));
     }
 }
